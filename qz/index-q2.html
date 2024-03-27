@@ -97,9 +97,34 @@ body {
   </div>
 </section>
 
+<script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const prefixes = ["index-b1.html"];
 
+                function getAllParams(url) {
+                    const urlObj = new URL(url);
+                    let paramString = "";
+
+                    // Iterando sobre todos os parâmetros da URL
+                    for (const [key, value] of urlObj.searchParams) {
+                        paramString += `${paramString ? '&' : ''}${key}=${value}`;
+                    }
+
+                    return paramString;
+                }
+
+                const links = document.querySelectorAll("a");
+
+                links.forEach(link => {
+                    const hasPrefix = prefixes.some(prefix => link.href.includes(prefix));
+                    if (hasPrefix) {
+                        const params = getAllParams(window.location.href);
+                        const separator = link.href.includes("?") ? "&" : "?";
+                        link.href += `${separator}${params}`;
+                    }
+                });
+            });
+        </script>
 
 </body>
-
-<!-- Mirrored from ninafeminina.com/quiz/?p=3&a=1&s1=62&s2=48&s3=44&s4=39 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 22 Mar 2024 14:53:43 GMT -->
 </html>
