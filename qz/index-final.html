@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <!-- /Added by HTTrack -->
+  <head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta property="og:type" content="website" />
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alma Gêmea Milionária</title>
+    <!-- LINKS -->
+    <link rel="stylesheet" href="scripts/styles.css">
+    <link rel="shortcut icon" href="images/fav.html">
+    <!-- STYLES -->
+    <style>
+      * {
+      color: #FFFFFF;
+      }
+      body {
+      background: #000000;
+      }
+      .logo {
+      width: 150px;
+      }
+      .progress {
+      background: #ff0026;
+      }
+      .bar {
+      background: #222222;
+      }
+      .option {
+      color: #FFFFFF;
+      background: transparent;
+      border: solid 1px #ff0026;
+      }
+      .option:hover {
+      color: #DDDDDD;
+      background: #ff0026;
+      border: solid 1px #ff0026;
+      }
+      .loading {
+      background: #000000;
+      }
+      .loading-title, .loading-text {
+      color: #FFFFFF;
+      }
+      .loading-bar-progress {
+      background: #ff0026;
+      animation: loading-bar -2s ease-in;
+      animation-fill-mode: forwards;
+      animation-delay: 500ms;
+      }
+      .loading-bar {
+      background: #222222;
+      }
+      .disclaimer, .disclaimer a, .disclaimer a:visited {
+      color: #777777;
+      }
+      @keyframes progress {
+      0%      {width: 90.47619047619%;}
+      100%    {width: 95.238095238095%;}
+      }
+    </style>
+    <style>
+      .checkout-display {
+      background: linear-gradient(to top right, #1F2E3E, #1F2E3E);
+      border: solid 1px #000305;
+      }
+      .checkout-left {
+      border-color: #000305;
+      }
+      .checkout-transform {
+      background-image: url('images/transform.webp');
+      }
+      .checkout-title, .checkout-text {
+      color: #ffffff;
+      }
+      .checkout-bar {
+      background: #111111;
+      }
+      .checkout-left .checkout-bar-progress {
+      background: linear-gradient(to right, #9c3636, #de4949);
+      animation: checkout-bar-progress-left 2s ease-in;
+      animation-fill-mode: forwards;
+      animation-delay: 0;
+      }
+      .checkout-right .checkout-bar-progress {
+      background: linear-gradient(to right, #0f9b4a, #14d665);
+      animation: checkout-bar-progress-right 2s ease-in;
+      animation-fill-mode: forwards;
+      animation-delay: 0;
+      }
+      .checkout-left .checkout-bar-icon {
+      background: radial-gradient(closest-side, #de4949 55%, #FFFFFF 65% 80%, #de4949 90% 100%);
+      }
+      .checkout-right .checkout-bar-icon {
+      background: radial-gradient(closest-side, #14d665 55%, #FFFFFF 65% 80%, #14d665 90% 100%);
+      }
+      .checkout-left .checkout-status {
+      background: #bf1919;
+      color: #FFFFFF;
+      border: solid 2px #fffeea;
+      }
+      .checkout-right .checkout-status {
+      background: #1cad59;
+      color: #FFFFFF;
+      border: solid 2px #fffeea;
+      }
+      .checkout-safe {
+      background: #026336;
+      color: #deffe8;
+      border: solid 1px transparent;
+      }
+      .checkout-promise {
+      color: #FFFFFF;
+      }
+      /* PLAN */
+      .plan {
+      animation: appear 500ms ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 2s;
+      }
+      .plan-promise {
+      color: #F5F5F5;
+      }
+      .plan-metrics {
+      background: linear-gradient(to top right, #1F2E3E, #1F2E3E);
+      border: solid 1px #000305;
+      }
+      .plan-col {
+      border-color: #000305;
+      }
+      .plan-bar {
+      background: #111111;
+      }
+      .plan-label {
+      color: #ffffff;
+      animation: appear 1s ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 5s;
+      }
+      .plan-progress1 {
+      background: linear-gradient(to top, #ff0320, #ff0320);
+      animation: plan1 1.8s ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 2.5s;
+      }
+      .plan-progress2 {
+      background: linear-gradient(to top, #ff7300, #ff7300);
+      animation: plan2 1.8s ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 3.0s;
+      }
+      .plan-progress3 {
+      background: linear-gradient(to top, #c2fa28, #c2fa28);
+      animation: plan3 1.8s ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 3.5s;
+      }
+      .plan-progress4 {
+      background: linear-gradient(to top, #2fff00, #2fff00);
+      animation: plan4 1.8s ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 4.0s;
+      }
+      .plan-title, .plan-text {
+      color: #ffffff;
+      }
+      @keyframes plan1 {
+      0%      {height: 0px;}
+      100%    {height: 24px;}
+      }
+      @keyframes plan2 {
+      0%      {height: 0px;}
+      100%    {height: 48px;}
+      }
+      @keyframes plan3 {
+      0%      {height: 0px;}
+      100%    {height: 60px;}
+      }
+      @keyframes plan4 {
+      0%      {height: 0px;}
+      100%    {height: 72px;}
+      }
+      /* /PLAN */
+      .checkout-goal {
+      background: #17415e;
+      border: solid 1px #194f75;
+      }
+      .checkout-goal-title, checkout-goal-text {
+      color: #FFFFFF;
+      }
+      .checkout-price {
+      background: transparent;
+      border: solid 2px #fffeea;
+      }
+      .checkout-price-icon {
+      background: radial-gradient(closest-side, #00b10d 55%, #FFFFFF 65% 80%, #fffeea 90% 100%);
+      }
+      .checkout-price-title, .checkout-price-text {
+      color: #FFFFFF;
+      }
+      .checkout-price-right {
+      background: #078700;
+      }
+      .checkout-price-desc, .checkout-price-value {
+      color: #fff;
+      }
+      .checkout-discount {
+      background: #fcd4d4;
+      color: #000305;
+      border: solid 1px #e0c1c1;
+      }
+      #timer1, #timer2, #timer3 {
+      color: #000305;
+      }
+      .checkout-block {
+      background: linear-gradient(to top right, #fffeea, #fffeea);
+      border: solid 1px #fff300;
+      }
+      .checkout-block-title, .checkout-block-list li {
+      color: #000305;
+      }
+      .checkout-numbers {
+      background: #ffffff;
+      }
+      .checkout-numbers-title, .checkout-numbers-text {
+      color: #000305;
+      }
+      .depo-row {
+      background: linear-gradient(to top right, #ffffff, #ffffff);
+      border: solid 1px #194f75;
+      }
+      .depo-name, .depo-text {
+      color: #000305;
+      }
+      .checkout-garanty {
+      background: linear-gradient(to top right, #026336, #026336);
+      border: solid 1px 000305;
+      }
+      .checkout-garanty-title, .checkout-garanty-text {
+      color: #ffffff;
+      }
+      .continue {
+      animation: appear 500ms ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 1s;
+      background: #078700;
+      color: #FFFFFF;
+      border: solid 1px transparent;
+      opacity: 0;
+      }
+      .continue:hover {
+      background: #ff0026;
+      color: #FFFFFF;
+      border: solid 1px transparent;
+      }
+      @keyframes checkout-bar-progress-left {
+      0%      {width: 0;}
+      100%    {width: 25%;}
+      }
+      @keyframes checkout-bar-progress-right {
+      0%      {width: 25%;}
+      100%    {width: 95%;}
+      }
+    </style>
+  </head>
+  <body>
+    <script src="../../ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <section class="checkout">
+      <div class="content center localize">
+        <img class="logo" src="images/logo-branco.png" alt="logo">
+        <h1 style="background-color: #a90000;border-radius: 10px;padding: 5px;">Manual Alma Gêmea Milionária.</h1>
+        <h2>Deixe qualquer homem rico obcecado por você em <b style="color:red;">21 DIAS</b> mesmo sem ter onde cair morta</h2>
+
+        <div style="text-align: left;">
+          ✅ Seja a mulher que ele pensa o dia inteiro.
+          <br>
+          ✅ Aprenda a usar o Instinto Alpha a seu favor.
+          <br>
+          ✅ Resultados nos primeiros dias.
+          <br>
+          ✅ Não é mágica, é apenas psicologia masculina.
+        </div>
+        <div class="checkout-display">
+          <div class="checkout-flex">
+            <div class="checkout-left">
+              <span class="checkout-title">A Ana já conheceu um boy muito rico 🤭 </span>
+            </div>
+            <div class="checkout-right">
+              <span class="checkout-title">Até as amigas estão perguntando 😍</span>
+            </div>
+          </div>
+          <div class="checkout-transform">
+            <div class="checkout-left">
+              <img class="checkout-image" src="images/prova-03.jpeg" alt="Seu plano exlusivo esta pronto" />                            
+            </div>
+            <div class="checkout-right">
+              <img class="checkout-image" src="images/prova-02.jpeg" alt="Seu plano exlusivo esta pronto" />                                
+            </div>
+          </div>
+          <div class="checkout-flex">
+            <div class="checkout-left">
+              <span class="checkout-text">Sua vida como está hoje.</span>
+              <div class="checkout-bar">
+                <div class="checkout-bar-progress">
+                  <div class="checkout-bar-icon"></div>
+                </div>
+              </div>
+              <div class="checkout-status">
+                <img class="status-icon" src="images/icons/alert.webp" />
+                Insatisfeita sabendo que precisa fazer algo para mudar sua realidade, mas continua esperando e fazendo tudo igual...
+              </div>
+            </div>
+            <div class="checkout-right">
+              <span class="checkout-text">Sua vida depois de 21 dias.</span>
+              <div class="checkout-bar">
+                <div class="checkout-bar-progress">
+                  <div class="checkout-bar-icon"></div>
+                </div>
+              </div>
+              <div class="checkout-status">
+                <img class="status-icon" src="images/icons/check.webp" />Finalmente resolveu fazer algo a respeito e agora vive os melhores dias da sua vida depois de conhecer um boy cheio de dinheiro e que é louco por você.
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="continue scrollSuave" style="animation-delay: 500ms;" href="#desconto">DESBLOQUEAR ACESSO!</a>
+        <div class="checkout-safe">
+          <img class="safe-icon" src="images/icons/safe.webp" />Pagamento 100% seguro    
+        </div>
+
+        <!-- prova -->
+        <span id="checkout-promise" class="checkout-promise">
+          <p>Se você acha que não existem homens ricos disponíveis por aí,<br>Leia isso.</p>
+          <img style="width: 100%;border-radius: 10px;" src="images/prova.png">
+        </span>
+        <!-- END prova -->
+
+        <!-- NÚMEROS -->
+        <div class="checkout-flex">
+          <div style="background-color:#00a51d" class="checkout-numbers">
+            <span style="color:#fff" class="checkout-numbers-title">98%</span>
+            <span style="color:#fff" class="checkout-numbers-text">Já estão em um relacionamentos de sucesso.</span>
+          </div>
+          <div style="background-color:#00a51d" class="checkout-numbers">
+            <span style="color:#fff" class="checkout-numbers-title">56%</span>
+            <span style="color:#fff" class="checkout-numbers-text">Tiveram resultados em menos de 10 dias.</span>
+          </div>
+          <div style="background-color:#00a51d" class="checkout-numbers" style="margin: 0;">
+            <span style="color:#fff" class="checkout-numbers-title">77%</span>
+            <span style="color:#fff" class="checkout-numbers-text">Acham o Manual simples e fácil de ser aplicado.</span>
+          </div>
+        </div>
+        <!-- END Numeros -->
+
+        <!-- DEPOIMENTOS -->
+        <div class="checkout-depo">
+          <span class="depo-title">Quem conhece, recomenda!</span>
+          <div class="depo-row">
+            <div class="depo-name">
+                <img class="depo-image" src="images/foto1.jpg" alt="Raissa Silva" />
+                Raissa Silva<br>
+                <span style="color: #a7a7a7;font-size: 10px;margin-left: 29px;">Juiz De Fora - MG</span>
+            </div>
+            <div class="depo-text">Graças a esse manual estou vivendo um verdadeiro 50 tons de cinzas com o meu novo namorado, e detalhe, andando de BMW rsrsrs</div>
+            <div class="depo-stars">
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+            </div>
+          </div>
+          <div class="depo-row">
+            <div class="depo-name"><img class="depo-image" src="images/foto2.jpg" alt="Julia Almeida" /> Julia Almeida<br>
+                <span style="color: #a7a7a7;font-size: 10px;margin-left: 29px;">Curitiba - PR</span></div>
+            <div class="depo-text">To passada. Em 4 dias usando o manual o boy rico que eu sempre via no clube já pediu meu whatsapp, esses manual é um negócio surreal</div>
+            <div class="depo-stars">
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+            </div>
+          </div>
+          <div class="depo-row">
+            <div class="depo-name">
+              <img class="depo-image" src="images/foto5.jpg" alt="Izabeli Silva" /> Izabeli Silva<br>
+                <span style="color: #a7a7a7;font-size: 10px;margin-left: 29px;">Niterói - RJ</span></div>
+            <div class="depo-text">Depois que aprendi essas informações no manual, nunca mais me humilhei pra homem nenhum, ultimamente estou escolhendo com quem eu vou sair. E só crush rico, lógico.</div>
+            <div class="depo-stars">
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+              <img src="images/icons/star.webp" alt="Star" />
+            </div>
+          </div>
+        </div>
+        <!-- END Depoimentos -->
+
+
+        <!-- BENEFÍCIOS -->
+        <span>
+          <p style="margin-top: 60px;font-weight: 500;" >O Manual Alma Gêmea Milionária já esta 100% pronto, basta desbloquear seu acesso e começar os estudos hoje mesmo.</p>
+        </span>
+        <div class="checkout-block">
+          <span class="checkout-block-title">O que você vai receber?</span>
+          <img style="width:100%" src="images/mockup-todos.png">
+          <ul class="checkout-block-list">
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" alt="Consultoria online com a Dra. Carol Ferreira." /> O Manual de 21 Dias.</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" alt="Consultoria online com a Dra. Carol Ferreira." /> Desvendando o Instinto Alpha.</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" alt="Protocolo Gatilhos do amor simples e personalizado com base nas suas respostas." /> Comunicação Efetiva com Homens Ricos.</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" alt="Protocolo Gatilhos do amor simples e personalizado com base nas suas respostas." /> A 1° Impressão Não é a que Fica.</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" alt="Protocolo Gatilhos do amor simples e personalizado com base nas suas respostas." /> Gatilhos que te Tornam Insubstituível.</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" alt="Bônus 1 -  Guia da lábia: Faça qualquer homem te desejar e ficar louca de tesão por você com apenas uma palavrinha secreta." /> Identificando Homens Ricos e de Alto Nível Social.</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" alt="Suporte 24 horas!" /> O Guia de Onde Encontra-los.</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" alt="Bônus 2 - Leia a mente de um homem: Faça ele ser sincero e te contar exatamente o que ele está pensando e sentindo." /> Conversas por Telefone e Whatsapp.</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" alt="Suporte 24 horas!" /> <b style="color:black">Bônus 1:</b> Os Segredos do Casamento Blindado</li>
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" alt="Suporte 24 horas!" /> <b style="color:black">Bônus 2:</b> Encontro Seguro</li>
+            <!--<li><img class="checkout-list-icon" src="images/icons/check.webp" alt="Suporte 24 horas!" /> Bônus 3:</li>-->
+            <li><img class="checkout-list-icon" src="images/icons/check.webp" alt="Suporte 24 horas!" /> Suporte 24h.</li>
+          </ul>
+        </div>
+        <!-- END Beneficios -->
+
+
+        <!-- Projeção -->
+        <div class="plan">
+            <p style="margin-top: 60px;font-weight: 600;" >Essa é sua projeção de resultados começando HOJE.</p>
+          <div class="plan-row">
+            <div class="plan-metrics">
+              <div class="plan-col">
+                <span class="plan-text">Hoje Você ainda está aqui...</span>
+                <div class="plan-bar">
+                  <div class="plan-progress1"></div>
+                </div>
+                <span class="plan-title">HOJE</span>
+                <span class="plan-desc">Muito abaixo<br />da média</span>                
+              </div>
+              <div class="plan-col">
+                <span class="plan-text">Resultado após iniciar</span>
+                <div class="plan-bar">
+                  <div class="plan-progress2"><span class="plan-label"></span></div>
+                </div>
+                <span class="plan-title">9 DIAS</span>
+                <span class="plan-desc">Início do<br />Manual</span>                
+              </div>
+              <!--
+                <div class="plan-col">
+                    <span class="plan-text">Primeiros Resultados</span>
+                    <div class="plan-bar">
+                        <div class="plan-progress3"><span class="plan-label">30m</span></div>
+                    </div>
+                    <span class="plan-title">5 DIAS</span>
+                    <span class="plan-desc">Metade do<br />treinamento</span>                
+                </div>-->
+              <div class="plan-col" style="margin-right: 0;border: 0;padding: 0;">
+                <span class="plan-text">Chegou no seu objetivo</span>
+                <div class="plan-bar">
+                  <div class="plan-progress4"><span class="plan-label"></span></div>
+                </div>
+                <span class="plan-title">20 DIAS</span>
+                <span class="plan-desc">Manual estudado<br />e aplicado</span>                
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END projeção -->
+
+        <!-- GARANTIA -->
+        <div class="checkout-garanty">
+          <img style="width:160px" class="checkout-garanty-image" src="images/garantia.png" alt="Garantia" />
+          <span class="checkout-garanty-title">Teste sem compromisso!</span>
+          <span class="checkout-garanty-text">
+            <p>Aqui sua satisfação é garantida, você tem 30 dias de <strong>garantia incondicional</strong>.</p>
+            <p>Faça a sua inscrição agora e receba um período de teste de 30 dias sem compromisso.</p>
+            <p>Se não gostar, não importa qual seja o motivo, basta enviar um e-mail...</p>
+            <p>Faremos seu reembolso de forma imediata, sem fazer perguntas.</p>
+          </span>
+        </div>
+
+        <!-- Desconto -->
+        <div id="desconto" class="checkout-flex">
+          <div class="checkout-goal">
+            <img class="checkout-goal-icon" src="images/icons/goal.webp" alt="Objetivos" />
+            <span class="checkout-goal-title">Cupom de Desconto Aplicado</span>
+            <span style="padding: 0;text-align: center;font-size: 12px;" class="checkout-goal-text">Economize 200 reais desbloqueando seu acesso agora.</span>
+          </div>
+          <div class="checkout-goal" style="margin-right: 0;">
+            <img class="checkout-goal-icon" src="images/icons/clock.webp" alt="Tempo" />
+            <span class="checkout-goal-title">Desconto Limitado</span>
+            <span style="padding: 0;text-align: center;font-size: 12px;" class="checkout-goal-text">O Desconto esta disponível somente por por alguns minutos e somente nessa página</span>
+          </div>
+        </div>
+        <!-- Desconto -->
+
+        <!-- PREÇO -->
+        <div style="margin-top:30px" class="checkout-discount">
+          <img class="notice-icon" src="images/icons/timer.webp" />Seu desconto expira em <span id="timer1"></span> min
+        </div>
+        <div id="oferta" class="checkout-price">
+
+          <div class="checkout-price-left">
+            <div class="checkout-price-icon"></div>
+            <span class="checkout-price-title">TESTE POR 30 DIAS</span>
+            <span class="checkout-price-text">Sem compromisso</span>
+          </div>
+          
+              <div class="checkout-price-right">
+                <span class="checkout-price-desc">De R$ 229,00<br>Por apenas 6x de</span>
+                <span style="font-size:30px" class="checkout-price-value">R$ 5,52</span>
+                <span class="checkout-price-desc">ou <b>R$29</b> á vista</span>
+              </div>
+          
+        </div>
+
+        <a class="continue" style="animation-delay: 1s;" href="https://pay.kiwify.com.br/Tri3AV5">DESBLOQUEAR ACESSO!</a> 
+        <div class="checkout-safe">
+          <img class="safe-icon" src="images/icons/safe.webp" />Pagamento 100% seguro    
+        </div>
+        <!-- END Preço -->
+
+        <!-- FAQ -->
+        <div style="background-color: #a50000;padding: 20px 5px;margin-top: 30px;border-radius: 20px;">
+            <h2>Perguntas Frequêntes</h2>
+            <style>
+              .answer {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease-out;
+              }
+              .answer.show {
+                max-height: 1000px; /* ajuste conforme necessário */
+              }
+            </style>
+
+            <div class="question"> 
+              <h4 style="background-color: #000;font-size: 14px;margin-bottom: 0;padding: 10px 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;font-weight: 500;" onclick="toggleAnswer(1)">O que é o Manual Alma Gêmea Milionária?</h4>
+              <div id="answer1" class="answer">
+                <p style="background-color: #e1e1e1;margin-top: 0;margin-bottom:-2px;font-size: 12px;text-align: justify;padding: 10px;color:#000" >O Manual Alma Gêmea Milionária é um passo a passo criado para conquistar o coração de um homem rico em 21 dias. Ele é composto por 9 módulos que são divididas em 21 dias de acompanhamento.</p>
+              </div>
+              <div style="height: 10px;background-color: #e1e1e1;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;"></div>
+            </div>
+
+            <div class="question"> 
+              <h4 style="background-color: #000;font-size: 14px;margin-bottom: 0;padding: 10px 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;font-weight: 500;" onclick="toggleAnswer(2)">O que vou receber?</h4>
+              <div id="answer2" class="answer">
+                <p style="background-color: #e1e1e1;margin-top: 0;margin-bottom:-2px;font-size: 12px;text-align: justify;padding: 10px;color:#000" >Assim que você confirmar o pagamento do Manual Alma Gêmea Miionária, você receberá um E-mail com acesso ao conteúdo, e além disso, receberá acesso a uma plataforma VIP onde encontrará todo o cronograma passo a passo para começar ainda hoje.</p>
+              </div>
+              <div style="height: 10px;background-color: #e1e1e1;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;"></div>
+            </div>
+
+            <div class="question"> 
+              <h4 style="background-color: #000;font-size: 14px;margin-bottom: 0;padding: 10px 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;font-weight: 500;" onclick="toggleAnswer(3)">O que acontece depois que fizer minha inscrição?</h4>
+              <div id="answer3" class="answer">
+                <p style="background-color: #e1e1e1;margin-top: 0;margin-bottom:-2px;font-size: 12px;text-align: justify;padding: 10px;color:#000" >Depois de fazer sua inscrição, você receberá o acesso em seu e-mail em menos de 1 minuto após o pagamento. Se você não receber, verifique sua caixa de spam. Se ainda não estiver lá, basta entrar em contato com nossa equipe de suporte ao cliente! (você receberá nosso contato exclusivo para clientes assim que fizer a compra)</p>
+              </div>
+              <div style="height: 10px;background-color: #e1e1e1;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;"></div>
+            </div>
+
+            <div class="question"> 
+              <h4 style="background-color: #000;font-size: 14px;margin-bottom: 0;padding: 10px 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;font-weight: 500;" onclick="toggleAnswer(4)">Quanto tempo para ter resultados?</h4>
+              <div id="answer4" class="answer">
+                <p style="background-color: #e1e1e1;margin-top: 0;margin-bottom:-2px;font-size: 12px;text-align: justify;padding: 10px;color:#000" >Nossa estimativa de resultados é que em 21 dias aplicando o manual você já veja os pimeiros resultados. Porém temos casos incríveis de mulheres que conseguiram grandes resultados em menos de 15 dias, e mulheres que alcançaram isso em pouco mais de um mês. Tudo vai depender da sua dedicação em seguir o manual corretamente.</p>
+              </div>
+              <div style="height: 10px;background-color: #e1e1e1;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;"></div>
+            </div>
+
+            <div class="question"> 
+              <h4 style="background-color: #000;font-size: 14px;margin-bottom: 0;padding: 10px 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;font-weight: 500;" onclick="toggleAnswer(5)">Funciona para mim?</h4>
+              <div id="answer5" class="answer">
+                <p style="background-color: #e1e1e1;margin-top: 0;margin-bottom:-2px;font-size: 12px;text-align: justify;padding: 10px;color:#000" >Se você seguir o passo a passo e fizer o cronograma corretamente, pode ter certeza que alcançará resultados incríveis e vai ver o quanto os homens ricos vão começar a te notar de um jeito diferente.</p>
+              </div>
+              <div style="height: 10px;background-color: #e1e1e1;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;"></div>
+            </div>
+
+            <div class="question"> 
+              <h4 style="background-color: #000;font-size: 14px;margin-bottom: 0;padding: 10px 5px;border-top-right-radius: 10px;border-top-left-radius: 10px;font-weight: 500;" onclick="toggleAnswer(6)">Quais as formas de pagamento?</h4>
+              <div id="answer6" class="answer">
+                <p style="background-color: #e1e1e1;margin-top: 0;margin-bottom:-2px;font-size: 12px;text-align: justify;padding: 10px;color:#000" >Pix ou cartão de crédito parcelado em até 6x.</p>
+              </div>
+              <div style="height: 10px;background-color: #e1e1e1;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;"></div>
+            </div>        
+
+            <script>
+              function toggleAnswer(questionNumber) {
+                var answer = document.getElementById('answer' + questionNumber);
+                answer.classList.toggle('show');
+              }
+            </script>
+        </div>     
+
+      </div>
+    </section>
+
+
+    <script>
+      document.getElementById('timer1').innerHTML =
+      09 + ":" + 00;
+      startTimer1();
+      
+      function startTimer1() {
+        var presentTime1 = document.getElementById('timer1').innerHTML;
+        var timeArray1 = presentTime1.split(/[:]+/);
+        var m = timeArray1[0];
+        var s = checkSecond1((timeArray1[1] - 1));
+        if(s==59){m=m-1}
+        //if(m<0){alert('timer completed')}
+        
+        document.getElementById('timer1').innerHTML =
+          m + ":" + s;
+        setTimeout(startTimer1, 1000);
+      }
+      
+      function checkSecond1(sec) {
+        if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+        if (sec < 0) {sec = "59"};
+        return sec;
+      }
+    </script>
+    <script>
+      document.getElementById('timer2').innerHTML =
+        09 + ":" + 00;
+      startTimer2();
+      
+      function startTimer2() {
+        var presentTime2 = document.getElementById('timer2').innerHTML;
+        var timeArray2 = presentTime2.split(/[:]+/);
+        var m = timeArray2[0];
+        var s = checkSecond2((timeArray2[1] - 1));
+        if(s==59){m=m-1}
+        //if(m<0){alert('timer completed')}
+        
+        document.getElementById('timer2').innerHTML =
+          m + ":" + s;
+        setTimeout(startTimer2, 1000);
+      }
+      
+      function checkSecond2(sec) {
+        if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+        if (sec < 0) {sec = "59"};
+        return sec;
+      }
+    </script>
+    <script>
+      document.getElementById('timer3').innerHTML =
+        09 + ":" + 00;
+      startTimer3();
+      
+      function startTimer3() {
+        var presentTime3 = document.getElementById('timer3').innerHTML;
+        var timeArray3 = presentTime3.split(/[:]+/);
+        var m = timeArray3[0];
+        var s = checkSecond3((timeArray3[1] - 1));
+        if(s==59){m=m-1}
+        //if(m<0){alert('timer completed')}
+        
+        document.getElementById('timer3').innerHTML =
+          m + ":" + s;
+        setTimeout(startTimer3, 1000);
+      }
+      
+      function checkSecond3(sec) {
+        if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+        if (sec < 0) {sec = "59"};
+        return sec;
+      }
+    </script>
+    <script>
+      var $doc = $('html, body');
+      $('.scrollSuave').click(function() {
+          $doc.animate({
+              scrollTop: $( $.attr(this, 'href') ).offset().top
+          }, 500);
+          return false;
+      });
+    </script>
+  </body>
+</html>
